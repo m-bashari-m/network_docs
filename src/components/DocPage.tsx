@@ -1,7 +1,10 @@
 // DocPage.tsx
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import ReactMarkdown from 'react-markdown';
+import Markdown from "markdown-to-jsx"
+import Code from './Code';
+import Header from './Header';
+
 
 const DocPage = () => {
   const { docName } = useParams<{ docName: string }>();
@@ -15,6 +18,7 @@ const DocPage = () => {
         if (!response.ok) {
           throw new Error(`Could not fetch the file: ${response.statusText}`);
         }
+              
         const markdown = await response.text();
         setMarkdownContent(markdown);
       } catch (error) {
@@ -24,11 +28,28 @@ const DocPage = () => {
 
     fetchMarkdown();
   }, [docName]);
+    
 
   return (
-    <div className="markdown-body">
-      <ReactMarkdown>{markdownContent}</ReactMarkdown>
-    </div>
+    <>
+      <Header />
+      
+      <article className="article">
+        <div className="container">
+          <div className="post-wrapper">
+            <Markdown options={{
+              overrides: {
+                Code: {
+                  component: Code
+                }
+              }
+            }}>
+              {markdownContent}
+            </Markdown>
+          </div>
+        </div>
+      </article>
+    </>
   );
 };
 

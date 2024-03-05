@@ -1,16 +1,14 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-
-const docFiles = ["test.md"]; // Example files
+import docs from "../../docs/data"
 
 const LandingPage = () => {
   return (
     <div>
       <h1>Documentation</h1>
       <ul>
-        {docFiles.map(file => (
-          <li key={file}>
-            <Link to={`/docs/${file.replace('.md', '')}`}>{file}</Link>
+        {docs.map(file => (
+          <li key={file.path}>
+            <Link to={`/docs/${file.path.replace('.md', '')}`}>{file.path.replace("./", "")}</Link>
           </li>
         ))}
       </ul>
