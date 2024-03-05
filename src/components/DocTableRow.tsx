@@ -16,7 +16,7 @@ const DocTableRow = ({ doc, onTagClick }: DocTableRowProps) => {
     <div className="flex justify-between border-b group bg-background-primary">
       <div className="relative w-full">
         <Link
-          to={`/docs/${doc.filePath.replace(".md", "")}`}
+          to={`/docs/${doc.fileName}`}
           className="flex items-center pl-6 pr-14 py-4 transition group-hover:bg-background-secondary gap-4"
         >
           <img src={image} alt="doc image" className="rounded-full w-24 h-24" />

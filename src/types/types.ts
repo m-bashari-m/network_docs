@@ -5,7 +5,7 @@ export type ConceptTag = "Security" | "General";
 export type Tag = LevelTag | ConceptTag;
 
 export type DocConfig = {
-  filePath: string;
+  fileName: string;
   title: string;
   description?: string;
   image?: string;

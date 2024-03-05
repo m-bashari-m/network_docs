@@ -34,21 +34,12 @@ _italicized text_
 
 ---
 
-<Code language="javascript">
+```
+switchport port-security
+switchport port-security maximum 1
+switchport port-security violation shutdown
 
-//strings
-const names = ["Seema", "Rekha", "Jaya"];
-names.sort();
-//['Jaya', 'Rekha', 'Seema' ]
-
-//Numbers
-const numbers = [101, 8, 87];
-numbers.sort((a, b) => {
-return a - b;
-});
-//[ 8, 87, 101 ]
-
-</Code>
+```
 
 ---
 
@@ -57,3 +48,12 @@ return a - b;
 ---
 
 ![alt text](../src/assets/doc_logos/001_doc_logo.webp)
+
+---
+
+| Syntax    | Description |
+| --------- | ----------- |
+| Header    | Title       |
+| Paragraph | Text        |
+
+---
