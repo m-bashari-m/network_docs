@@ -6,7 +6,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import data from "../../docs/data";
 import { DocConfig } from "../types/types";
-import Spinner from "./Spiiner";
+import Spinner from "./Spinner";
 
 const DocPage = () => {
   const { docName } = useParams<{ docName: string }>();

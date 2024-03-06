@@ -19,7 +19,7 @@ const Header = () => {
     <header className="w-full flex justify-center bg-background-secondary py-2">
       <div className="w-11/12 max-w-[900px] flex items-center gap-4">
         <Link to="/">
-          <FaHome className="w-10 h-10 text-lime-500 hover:cursor-pointer" />
+          <FaHome className="w-10 h-10 text-sky-500 hover:cursor-pointer" />
         </Link>
         <h2 className="capitalize text-white">{data[docIndex].title}</h2>
       </div>
