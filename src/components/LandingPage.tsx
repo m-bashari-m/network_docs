@@ -32,13 +32,25 @@ const LandingPage = () => {
         Network Documentation
       </h1>
       <div className="overflow-auto">
-        {docs.map((doc) => {
+        {docs.map((doc, index) => {
           if (searchParams) {
             return doc.tags?.includes(searchParams) ? (
-              <DocTableRow doc={doc} onTagClick={handleTagClick} />
+              <DocTableRow
+                key={index}
+                doc={doc}
+                index={index + 1}
+                onTagClick={handleTagClick}
+              />
             ) : null;
           }
-          return <DocTableRow doc={doc} onTagClick={handleTagClick} />;
+          return (
+            <DocTableRow
+              key={index}
+              doc={doc}
+              index={index + 1}
+              onTagClick={handleTagClick}
+            />
+          );
         })}
       </div>
     </div>

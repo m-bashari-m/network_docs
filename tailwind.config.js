@@ -19,6 +19,19 @@ export default {
           orange: "#F6AD55",
           purple: "#B794F4",
         },
+        animation: {
+          sparkle: "extend 1s 1, rotate 1s 1s infinite",
+        },
+        keyframes: {
+          extend: {
+            from: { transform: "scale(1) " },
+            to: { transform: "scale(1.5) " },
+          },
+          rotate: {
+            "0%, 100%": { transform: "rotate(-15deg) scale(1.5) " },
+            "50%": { transform: "rotate(15deg) scale(1.5) " },
+          },
+        },
       },
     },
   },

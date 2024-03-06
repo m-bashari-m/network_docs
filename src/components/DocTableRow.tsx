@@ -7,17 +7,22 @@ import Tag from "./Tag";
 export type DocTableRowProps = {
   doc: DocConfig;
   onTagClick: (type: Tag) => void;
+  index: number;
 };
 
-const DocTableRow = ({ doc, onTagClick }: DocTableRowProps) => {
+const DocTableRow = ({ doc, onTagClick, index }: DocTableRowProps) => {
   const image = doc.image || defaultImage;
 
   return (
     <div className="flex justify-between border-b group bg-background-primary">
+      <div className="flex items-center justify-center w-12 group-hover:bg-background-secondary border-r text-white">
+        {index}
+      </div>
+
       <div className="relative w-full">
         <Link
           to={`/docs/${doc.fileName}`}
-          className="flex items-center pl-6 pr-14 py-4 transition group-hover:bg-background-secondary gap-4"
+          className="flex items-center px-6 py-4 transition group-hover:bg-background-secondary gap-4"
         >
           <img src={image} alt="doc image" className="rounded-full w-24 h-24" />
           <div className="flex flex-col">
@@ -36,7 +41,7 @@ const DocTableRow = ({ doc, onTagClick }: DocTableRowProps) => {
         </Link>
       </div>
 
-      <div className="flex items-center justify-center px-4 group-hover:bg-background-secondary transition group-hover:animate-pulse border-l">
+      <div className="flex items-center justify-center w-12 group-hover:bg-background-secondary transition group-hover:animate-pulse border-l">
         <FaArrowRightLong className="text-white" />
       </div>
     </div>

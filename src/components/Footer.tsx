@@ -9,25 +9,30 @@ export type FooterProps = {
 
 const Footer = ({ nextDoc, prevDoc }: FooterProps) => {
   return (
-    <div className="flex container border-0 relative">
-      {prevDoc && (
-        <Link
-          to={`/docs/${prevDoc.fileName}`}
-          className="flex items-center justify-between gap-2 border rounded-lg p-4 max-w-[50ch] text-ellipsis text-white bg-background-secondary hover:opacity-90 hover:cursor-pointer"
-        >
-          <FaArrowLeft />
-          {prevDoc.title}
-        </Link>
-      )}
-      {nextDoc && (
-        <Link
-          to={`/docs/${nextDoc.fileName}`}
-          className=" flex items-center justify-between gap-2 border rounded-lg p-4 max-w-[50ch] text-white bg-background-secondary hover:opacity-90 hover:cursor-pointer"
-        >
-          {nextDoc.title}
-          <FaArrowRight />
-        </Link>
-      )}
+    <div className="flex w-full container border-0 relative">
+      <div className="w-1/2 flex">
+        {prevDoc && (
+          <Link
+            to={`/docs/${prevDoc.fileName}`}
+            className="flex items-center justify-between gap-2 border rounded-lg p-4 max-w-[50ch] text-ellipsis text-white bg-background-secondary hover:opacity-90 hover:cursor-pointer"
+          >
+            <FaArrowLeft />
+            {prevDoc.title}
+          </Link>
+        )}
+      </div>
+
+      <div className="w-1/2 flex justify-end">
+        {nextDoc && (
+          <Link
+            to={`/docs/${nextDoc.fileName}`}
+            className="flex items-center justify-between gap-2 border rounded-lg p-4 w-fit max-w-[50ch] text-white bg-background-secondary hover:opacity-90 hover:cursor-pointer"
+          >
+            {nextDoc.title}
+            <FaArrowRight />
+          </Link>
+        )}
+      </div>
     </div>
   );
 };
