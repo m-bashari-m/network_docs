@@ -14,8 +14,8 @@ const DocTableRow = ({ doc, onTagClick, index }: DocTableRowProps) => {
   const image = doc.image || defaultImage;
 
   return (
-    <div className="flex justify-between border-b group bg-background-primary">
-      <div className="flex items-center justify-center w-12 group-hover:bg-background-secondary border-r text-white">
+    <div className="flex justify-between border-b last:border-b-0 group bg-background-primary">
+      <div className="flex items-center justify-center w-12 transition group-hover:bg-background-secondary border-r text-white">
         {index}
       </div>
 
