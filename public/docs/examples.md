@@ -47,7 +47,7 @@ switchport port-security violation shutdown
 
 ---
 
-![alt text](../src/assets/doc_logos/001_doc_logo.webp)
+![alt text](../doc_logos/001_doc_logo.webp)
 
 ---
 
