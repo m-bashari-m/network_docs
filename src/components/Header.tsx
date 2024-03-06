@@ -1,5 +1,5 @@
 import { Link, useNavigate, useParams } from "react-router-dom";
-import data from "../../public/docs/data";
+import data from "./docs/data";
 import { FaHome } from "react-icons/fa";
 
 const Header = () => {
