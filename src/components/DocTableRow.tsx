@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { DocConfig } from "../types/types";
 import { FaArrowRightLong } from "react-icons/fa6";
-import defaultImage from "../assets/doc_logos/050_doc_logo.webp";
+import defaultImage from "../../public/doc_logos/050_doc_logo.webp";
 import Tag from "./Tag";
 
 export type DocTableRowProps = {

@@ -4,7 +4,7 @@ import Markdown from "markdown-to-jsx";
 import Code from "./Code";
 import Header from "./Header";
 import Footer from "./Footer";
-import data from "../../docs/data";
+import data from "../../public/docs/data";
 import { DocConfig } from "../types/types";
 import Spinner from "./Spinner";
 

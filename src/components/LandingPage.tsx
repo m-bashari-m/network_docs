@@ -1,4 +1,4 @@
-import docs from "../../docs/data";
+import docs from "../../public/docs/data";
 import DocTableRow from "./DocTableRow";
 import { useEffect, useState } from "react";
 import { Tag } from "../types/types";

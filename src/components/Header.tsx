@@ -1,5 +1,5 @@
 import { Link, useNavigate, useParams } from "react-router-dom";
-import data from "../../docs/data";
+import data from "../../public/docs/data";
 import { FaHome } from "react-icons/fa";
 
 const Header = () => {
@@ -7,8 +7,6 @@ const Header = () => {
   const navigate = useNavigate();
 
   const docIndex = data.findIndex((doc) => doc.fileName === docName);
-
-  console.log(docIndex);
 
   if (docIndex === -1) {
     navigate("/docs/404");

@@ -1,4 +1,4 @@
-import { DocConfig } from "../src/types/types";
+import { DocConfig } from "../../src/types/types";
 
 // Tags: "Hard" | "Medium" | "Easy" | "Security" | "General"
 
@@ -9,7 +9,7 @@ const docs: DocConfig[] = [
     description:
       "It's a complete example of available features, and it could be used for guidance",
     tags: ["General"],
-    image: "../src/assets/doc_logos/readme-logo.png",
+    image: "../doc_logos/readme-logo.png",
   },
 ];
 
